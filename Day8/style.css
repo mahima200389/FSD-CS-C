@@ -1,0 +1,24 @@
+#top
+{
+    background-color: aquamarine;
+    font-size: 20px;
+    border: 22px solid green;
+
+}
+h1{
+    color:black;
+    background-color: violet;
+    width: 50%;
+
+}
+a{
+    text-decoration: none;
+    width: 40%;
+    color:aqua;
+}
+h2{
+    font-size: 50px;
+    color: brown;
+    background-color: chartreuse;
+
+}
