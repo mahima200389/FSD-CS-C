@@ -1,21 +1,27 @@
-async function fetchdata(){
-    try{
-        let response =await fetch("https://v2.jokeapi.dev/joke/Any");
-        let data =await response.json();
-            // console.log(data);
-            data.forEach(element=>{
-                let =document.createElement("h2");
-                h2.textContent=element.login;
-                let a=document.createElement("a");
-                a.textContent=element.node_id;
-                a.setAttribute("href",element.html_url);
-                let top=document.getElementById("bottom");
-                bottom.appendChild(h1);
-                bottom.appendChild(a);   
-        
-    });
-    catch(error){
-        console.log(error);
-     }
+const API_URL = 'https://v2.jokeapi.dev/joke/Any';
+
+async function getJoke() {
+    try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+
+        let joke = '';
+        if (data.type === 'single') {
+            joke = data.joke;
+        } else {
+            joke = `${data.setup} ${data.delivery};
+        }
+
+        document.getElementById('joke-text').textContent = joke;
+        document.getElementById('char-count').textContent = Character count: ${joke.length};
+    } catch (error) {
+        console.error('Error fetching joke:', error);
+        document.getElementById('joke-text').textContent = 'Failed to load joke. Try again!';
+        document.getElementById('char-count').textContent = 'Character count: 0';
+    }
 }
 
+function clearJoke() {
+    document.getElementById('joke-text').textContent = 'Press the button for a joke!';
+    document.getElementById('char-count').textContent = 'Character count: 0';
+}
