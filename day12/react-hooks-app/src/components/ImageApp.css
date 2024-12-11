@@ -1,0 +1,21 @@
+.disp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-color: azure;
+  }
+  button {
+    background-color: aqua;
+    border-radius: 10px;
+  }
+  
