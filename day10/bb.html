@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src= "https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel"></script>
+    const parent =document.getElementById("parent");
+    const root=ReactDOM.createRoot(parent);
+    const h1=<h1>REACT CDN</h1>;
+    <!-- parent.render(h1); -->
+    const item1=<li>item1</li>;
+    const item2=<li>item2</li>;
+    const list=(<ul>{item1}{item2}</ul>);
+    const container=<div>{h1}{ul}</div> 
+    parent.render(container);
+           <!-- const h1=React.createElement("h1",{},"DoM MANIPULATION EXAMPLE");
+
+        const parent=document.getElementById("parent");
+        const root=ReactDOM.createRoot(parent);
+        const h2=React.createElement("h2",{},"React CDN");
+        root.render(h1);
+        const li1=React.createElement("li",{},"apple");
+        const li2=React.createElement("li",{},"banana");
+        const ul=React.createElement("ul",{},li1,li2);
+        root.render([h2,ul]); -->
+
+        // const parent=document.getElementById("parent");
+        // const h1=document.createElement("h1");
+        // h1.textContent="hello,react!";
+        // parent.appendchild(h1);
+        // const ul=document.createElement("ul");
+        // const li1=document.createElement("li");
+        // li1.textContent="apple";
+        // const li2=document.createElement("li");
+        // li2.textContent="banana";
+        // ul.appendchild(li1);
+        // ul.appendchild(li2);
+        // parent.appendchild(ul);
+
+        
+    </script>
+    
+</body>
+</html>
