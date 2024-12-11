@@ -1,0 +1,23 @@
+#d{
+  background-color: aqua;
+  color: black;
+  border: 10px solid green;
+  border: 10px;
+
+}
+h1{
+  background-color: chartreuse;
+  color: black;
+  font-size: 30px;
+
+}
+h2{
+  background-color: brown;
+  color: black;
+  font-size: 30px;
+}
+h3{
+  background-color:blueviolet;
+  color: black;
+  font-size: 30px;
+}
